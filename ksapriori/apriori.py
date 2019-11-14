@@ -10,7 +10,7 @@ def apriori(dataset,min_support):
     candidate_list = [candidate_list1]
     k = 2
     while(len(candidate_list[k-2]) > 0):
-        print ('Level : ', len(candidate_list[k-2]))
+        # print ('Level : ', len(candidate_list[k-2]))
         candidate_sets =   create_ck(candidate_list[k-2], k)
         candidate_list_k, support_data_k = scan_dataset(data, candidate_sets, min_support)
         support_data.update(support_data_k)
